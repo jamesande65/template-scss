@@ -1,3 +1,46 @@
-align-self-end{
+// flex
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-sb{
+  justify-content: space-between;
+}
+.align-center{
+  align-items: center;
+}
+.justify-end{
+  justify-content: flex-end;
+}
+.align-self-end{
   align-self: flex-end;
+}
+//position
+.fixed-to-top{
+  position: fixed;
+  z-index: 99;
+  top: 0;
+}
+
+//text-align
+.text-center{
+  text-align: center;
+}
+
+//text-hover
+.text-orange{
+  color: $orange;
+}
+.text-grey{
+  color: $grey;
+}
+//width
+
+.full-width{
+  width: 100%;
+}
+
+//text-weight
+.text-bold{
+  font-weight: 700;
 }

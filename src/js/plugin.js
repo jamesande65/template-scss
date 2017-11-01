@@ -1,5 +1,6 @@
 ;(function ($) {
 
+
     //dropdown
     var dropdownWrap = $('.dropdown-wrap');
 
@@ -16,35 +17,37 @@
     var body = $('body');
     var mobileClass = '_mobileSidebar';
     var openInMobile = '_openInMobile';
-    var mobileBreakPoint = 1280;
+    var mobileBreakPoint= 1280;
 
-    menuBtn.on('click', function(e){
+    menuBtn.on('click', function (e) {
 
-        var width = $(window).width(); //Получаем ширину окна
-        body.toggleClass(mobileClass); //вешаем класс для открытия меню
+        var width = $(window).width();// получаем ширину окна
+        body.toggleClass(mobileClass);// вешаем клас для открития меню
 
-        if ( width < mobileBreakPoint ){
+
+        if( width < mobileBreakPoint){
             body.toggleClass(openInMobile);
         }
-
     });
 
-    $(window).on('resize load', function(e){
+
+    $(window).on('resize load', function (e) {
         var width = $(this).width();
-        if( width < mobileBreakPoint && !body.hasClass(openInMobile) ){
+        if (width < mobileBreakPoint &&  !body.hasClass(openInMobile)){
             body.addClass(mobileClass);
-        } else if( width >= mobileBreakPoint ) {
+        } else if( width >= mobileBreakPoint){
+
             body.removeClass(mobileClass);
             body.removeClass(openInMobile);
         }
+
     });
 
-    //Loader hide
-    var loader = $('#loading');
 
+    //loader hide
+    var loader = $('#loading');
     $(window).on('load', function (e) {
         loader.addClass('hide');
     })
-
 
 })(jQuery);
