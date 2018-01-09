@@ -334,6 +334,65 @@
   }
 }
 
+//sheckboxes
+input[type="checkbox"]{
+  display: none;
+
+  & + label{
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1;
+
+    &::before{
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $lightGrey;
+      background-color: #fff;
+      margin-right: 16px;
+    }
+  }
+
+  &:checked{
+    & + label{
+      &::before{
+        background: $green url('../img/checkbox-bg.png') no-repeat center;
+      }
+    }
+  }
+}
+
+//sheckbox-wrapper
+.checkbox-wrap{
+  padding: 30px 0;
+
+  .checkboxes{
+    padding-top:30px;
+    height: 170px;
+
+    .checkbox-group{
+      padding: 12px 30px 12px 12px;
+      flex-grow: 1;
+      flex-basis: 33%;
+
+
+      &:hover{
+        background-color: $xsLightGrey;
+
+        [class*='icon-']{
+          opacity: 1;
+        }
+      }
+
+      [class*='icon-']{
+        opacity: 0;
+      }
+    }
+  }
+}
+
 .datepicker-form{
 
   .date-input-wrap{
